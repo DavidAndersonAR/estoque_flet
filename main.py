@@ -27,7 +27,7 @@ class Marcas(ft.UserControl):
             ),
 
     def db_execute(self, query, params=[]):
-        with pymysql.connect(host="45.238.112.151", user="david", password="26143024", database="GestaoEstoque", port=3010) as con:
+        with pymysql.connect(host="127.0.0.1", user="root", password="26143024", database="GestaoEstoque", port=3010) as con:
             cur = con.cursor()
             cur.execute(query, params)
             con.commit()
@@ -231,7 +231,7 @@ class Gestao(ft.UserControl):
                 print("Aqui ja é")
                 
 
-                with pymysql.connect(host="45.238.112.151", user="david", password="26143024", database="GestaoEstoque", port=3010) as con:
+                with pymysql.connect(host="127.0.0.1", user="root", password="26143024", database="GestaoEstoque", port=3010) as con:
                     cur = con.cursor()
                     cur.execute(query, params)
                     con.commit()
